@@ -1,0 +1,409 @@
+/*----------  login-area  ----------*/
+.login-area {
+  @include phone {
+    position: relative;
+    background-color: #3f5d45;
+    padding-top: 116px;
+  }
+
+  .container {
+    @include container-set;
+    display: flex;
+
+    @include phone {
+      @include container-set(100%);
+      margin: 0 auto;
+      flex-direction: column-reverse;
+      padding: 0;
+    }
+
+    .login-account {
+      width: 390px;
+      height: 380px;
+      margin: 30px auto 60px 80px;
+      text-align: center;
+      background-color: $primary-color;
+      display: flex;
+      flex-direction: column;
+
+      @include phone {
+        width: 100%;
+        height: auto;
+        margin: 0;
+      }
+
+      @include tablet {
+        width: 90%;
+        min-width: 320px;
+        margin-left: 20px;
+      }
+
+      .title {
+        width: 390px;
+        height: 130px;
+        margin: 40px auto;
+
+        h2 {
+          font-size: 36px;
+          color: $primary-color-light;
+          font-weight: bold;
+        }
+
+        @include phone {
+          width: 100%;
+          height: 110px;
+          position: absolute;
+          top: 0;
+          margin: 0;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+        }
+
+        @include tablet {
+          width: 100%;
+        }
+      }
+
+      .content {
+        height: 344px;
+        position: relative;
+
+        @include phone {
+          height: auto;
+        }
+
+        form {
+          display: flex;
+          flex-direction: column;
+          align-items: flex-start;
+
+          .form-group {
+            position: relative;
+            width: 330px;
+            margin: 0 auto 16px auto;
+
+            @include phone {
+              width: 330px;
+              margin: 30px auto 16px auto;
+            }
+
+            @include tablet {
+              width: 100%;
+              padding: 0 30px;
+            }
+
+            &:nth-child(2) {
+              margin-bottom: 13px;
+
+              @include phone {
+                margin: 0px auto 16px auto;
+              }
+            }
+
+            i {
+              position: absolute;
+              top: 16px;
+              left: 20px;
+              color: $primary-color;
+
+              @include tablet {
+                left: 42px;
+              }
+            }
+
+            input.form-control {
+              width: 330px;
+              height: 56px;
+              padding: 18px 120px 16px 64px;
+              font-size: 16px;
+              color: $primary-color-middle;
+              background-color: $primary-color-light;
+              border: 0;
+
+              @include tablet {
+                width: 100%;
+                padding: 18px 30px 16px 44px;
+              }
+            }
+          }
+
+          .checkbox-group {
+            width: 330px;
+            margin-left: 30px;
+            margin-bottom: 22px;
+            text-align: left;
+            position: relative;
+
+            @include phone {
+              width: 330px;
+              margin: 0 auto 22px auto;
+            }
+
+            @include tablet {
+              width: 100%;
+              margin-left: 0;
+              padding: 0 30px;
+            }
+
+            input {
+              position: absolute;
+              opacity: 0;
+            }
+
+            input + label {
+              position: relative;
+              cursor: pointer;
+              padding: 0;
+
+              &:before {
+                content: '';
+                display: inline-block;
+                vertical-align: bottom;
+                width: 16px;
+                height: 16px;
+                background: #fff;
+              }
+            }
+
+            input:checked + label:before {
+              background: darken($secondary-color, 30%);
+            }
+
+            input:checked + label:after {
+              content: '';
+              position: absolute;
+              top: 7px;
+              left: 3px;
+              width: 8px;
+              height: 4px;
+              border: 2px solid #fff;
+              border-top: none;
+              border-right: none;
+              -webkit-transform: rotate(45deg);
+              -ms-transform: rotate(45deg);
+              transform: rotate(-45deg);
+            }
+
+            span {
+              font-size: 16px;
+              color: $primary-color-light;
+            }
+          }
+
+          .login-group {
+            width: 100%;
+            height: 65px;
+            display: flex;
+
+            @include phone {
+              width: 100%;
+              margin: 0 auto;
+            }
+
+            a.btn {
+              width: 100%;
+              height: 65px;
+              line-height: 65px;
+              background-color: $secondary-color;
+              border: 1px solid $secondary-color;
+              font-size: 24px;
+              color: $primary-color;
+              font-weight: bold;
+              cursor: pointer;
+              transition: all 0.4s;
+
+              &:hover {
+                color: $primary-color-light;
+                background-color: darken($secondary-color, 30%);
+                border: 1px solid darken($secondary-color, 30%);
+              }
+
+              @include phone {
+                width: 100%;
+              }
+            }
+          }
+        }
+      }
+    }
+
+    .other-account {
+      width: 390px;
+      height: 350px;
+      margin-right: 80px;
+      margin-top: 45px;
+      text-align: center;
+      background-color: $primary-color-light;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+
+      @include phone {
+        width: 100%;
+        height: 116px;
+        margin-top: 0;
+        margin-right: auto;
+        margin-left: auto;
+      }
+
+      @include tablet {
+        width: 90%;
+        min-width: 320px;
+        margin-right: 20px;
+      }
+
+      .title {
+        width: 256px;
+        height: 33px;
+        margin: 40px 67px 36px 67px;
+
+        @include phone {
+          display: none;
+        }
+
+        @include tablet {
+          width: auto;
+          margin: 40px auto;
+        }
+
+        h3 {
+          height: 33px;
+          line-height: 33px;
+          font-size: 24px;
+          color: $primary-color-middle;
+          position: relative;
+
+          @include tablet {
+            width: 144px;
+          }
+
+          &:before {
+            content: '';
+            position: absolute;
+            top: 16px;
+            left: 0;
+            width: 45px;
+            height: 1px;
+            background-color: $primary-color-middle;
+
+            @include tablet {
+              left: -52px;
+            }
+          }
+
+          &:after {
+            content: '';
+            position: absolute;
+            top: 16px;
+            right: 0;
+            width: 45px;
+            height: 1px;
+            background-color: $primary-color-middle;
+
+            @include tablet {
+              right: -52px;
+            }
+          }
+        }
+      }
+
+      .content {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+
+        @include phone {
+          flex-direction: row;
+          justify-content: center;
+        }
+
+        @include tablet {
+          padding: 0 30px;
+        }
+
+        .btn {
+          width: 330px;
+          height: 56px;
+          background-color: #fff;
+          margin-bottom: 16px;
+
+          &:last-child {
+            margin-bottom: 41px;
+          }
+
+          @include phone {
+            width: 105px;
+            height: 56px;
+            margin-bottom: 0;
+            border-left: 1px solid $primary-color-light;
+            border-right: 1px solid $primary-color-light;
+
+            &:last-child {
+              margin-bottom: 0px;
+              border-right: 0px solid $primary-color-light;
+            }
+
+            &:first-child {
+              margin-bottom: 0px;
+              border-left: 0px solid $primary-color-light;
+            }
+          }
+
+          @include tablet {
+            width: 100%;
+          }
+
+          a.facebook {
+            background-image: url(../images/logo-facebook.svg);
+
+            @include phone {
+              background-size: 81px 16px;
+            }
+          }
+
+          a.google {
+            background-image: url(../images/logo-google.svg);
+
+            @include phone {
+              background-size: 91px 26px;
+            }
+          }
+
+          a.yahoo {
+            background-image: url(../images/logo-yahoo.svg);
+
+            @include phone {
+              background-size: 84px 19px;
+            }
+          }
+
+          a {
+            width: 330px;
+            height: 56px;
+            display: block;
+            background-size: 96px 31px;
+            background-repeat: no-repeat;
+            background-position: center;
+            border: 1px solid #fff;
+            transition: all 0.4s;
+
+            &:hover {
+              background-color: darken($primary-color-light, 5%);
+              border: 1px solid $primary-color-middle;
+            }
+
+            @include phone {
+              width: 100%;
+              height: 56px;
+            }
+
+            @include tablet {
+              width: 100%;
+            }
+          }
+        }
+      }
+    }
+  }
+}

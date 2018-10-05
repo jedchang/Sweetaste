@@ -1,0 +1,110 @@
+@import url(https://fonts.googleapis.com/earlyaccess/notosanstc.css);
+
+$primary-color: #3f5d45;
+$primary-color-middle: #8da291;
+$primary-color-light: #eaf0ed;
+$secondary-color: #ffe180;
+
+@mixin bg-set($url, $center-1: center, $center-2: center) {
+  background-image: $url;
+  background-size: cover;
+  background-position: $center-1 $center-2;
+  background-repeat: no-repeat;
+}
+
+@mixin container-set($w: 100%) {
+  width: $w;
+  padding: 0 42px;
+}
+
+@mixin phone() {
+  @media screen and (max-width: 767px) {
+    @content;
+  }
+}
+
+@mixin tablet() {
+  @media screen and (min-width: 768px) and (max-width: 1042px) {
+    @content;
+  }
+}
+
+// @mixin pc() {
+//   @media screen and (min-width: 992px) {
+//     @content;
+//   }
+// }
+
+/*----------  custom  ----------*/
+html,
+body {
+  -webkit-text-size-adjust: none;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+body,
+button,
+input,
+select,
+textarea,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+li,
+p {
+  box-sizing: border-box;
+  font-family: '微軟正黑體', 'Microsoft JhengHei', 'Noto Sans TC', 'Helvetica Neue', sans-serif;
+}
+
+a {
+  text-decoration: none;
+}
+
+img {
+  max-width: 100%;
+  vertical-align: top;
+}
+
+input:focus {
+  box-shadow: none;
+  outline: none;
+}
+
+input::-webkit-input-placeholder,
+textarea::-webkit-input-placeholder {
+  color: $primary-color-middle;
+}
+input:-moz-placeholder,
+textarea:-moz-placeholder {
+  color: $primary-color-middle;
+}
+
+select.custom-select {
+  // 默認 select 樣式清除
+  appearance: none;
+  -moz-appearance: none;
+  -webkit-appearance: none;
+  background-image: url(../images/icon-select-arrow.svg);
+  background-size: 0.55rem;
+  background-position: right 0.95rem center;
+  background-repeat: no-repeat;
+  outline: 0;
+
+  option {
+    text-indent: 10px;
+
+    &:hover {
+      background-color: #f80;
+      color: #fff;
+    }
+  }
+}

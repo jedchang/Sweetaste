@@ -1,0 +1,397 @@
+/*----------  banner  ----------*/
+.product-banner {
+  margin: 0 auto;
+  margin-bottom: 60px;
+
+  @include phone {
+    margin-bottom: 0px;
+  }
+
+  .container {
+    @include container-set;
+
+    @include phone {
+      @include container-set(100%);
+      padding: 0;
+    }
+
+    .main-bg {
+      width: 100%;
+      height: 496px;
+      margin: 0 auto;
+      position: relative;
+      @include bg-set(url(../images/banner-product.jpg));
+
+      @include phone {
+        width: 100%;
+        height: 277px;
+        background-position: center right;
+      }
+
+      @include tablet {
+        width: 100%;
+      }
+
+      .slogan {
+        width: 89px;
+        height: 328px;
+        background-image: url(../images/lg-想吃甜點是不需要理由的.svg);
+        background-repeat: no-repeat;
+        position: absolute;
+        right: 40px;
+        top: 40px;
+
+        @include phone {
+          width: 59px;
+          height: 218px;
+          right: 30px;
+          top: 30px;
+        }
+      }
+    }
+  }
+}
+
+/*----------  dessert-category  ----------*/
+.dessert-category {
+  margin-bottom: 60px;
+
+  @include phone {
+    margin-bottom: 30px;
+  }
+
+  .container {
+    @include container-set;
+    display: flex;
+
+    @include phone {
+      @include container-set(100%);
+      flex-direction: column;
+      padding: 0;
+    }
+
+    .menu-area {
+      margin-right: 20px;
+      border: 1px solid $primary-color-light;
+      height: 325px;
+
+      @include phone {
+        width: 100%;
+        border-left: none;
+        border-right: none;
+        margin-left: auto;
+        margin-right: auto;
+        margin-bottom: 30px;
+      }
+
+      li {
+        width: 298px;
+        height: 65px;
+        line-height: 65px;
+        text-align: center;
+        border-bottom: 1px solid $primary-color-light;
+
+        @include phone {
+          width: 100%;
+        }
+
+        @media screen and (min-width: 768px) and (max-width: 1042px) {
+          width: 100%;
+          min-width: 220px;
+        }
+
+        &.current {
+          background-color: $primary-color-light;
+        }
+
+        &.category:hover a {
+          background-color: $primary-color;
+        }
+
+        &.current:hover a {
+          background-color: $primary-color-light;
+        }
+
+        &:first-child {
+          background-color: $primary-color;
+
+          a {
+            color: $primary-color-light;
+          }
+        }
+
+        &:last-child {
+          border-bottom: 0px;
+        }
+
+        &:hover a {
+          background-color: $primary-color-light;
+        }
+
+        a {
+          display: block;
+          font-size: 24px;
+          font-weight: bold;
+          color: $primary-color;
+          transition: all 0.4s;
+
+          span {
+            margin-left: 10px;
+          }
+        }
+      }
+    }
+
+    .product-area {
+      width: 620px;
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+
+      @include phone {
+        width: 100%;
+        justify-content: center;
+      }
+
+      @media screen and (min-width: 768px) and (max-width: 1042px) {
+        width: 100%;
+      }
+
+      .single-product {
+        width: 300px;
+        text-align: center;
+        margin-right: 20px;
+        margin-bottom: 20px;
+
+        @include phone {
+          width: 315px;
+          margin-right: auto;
+          margin-left: auto;
+          margin-bottom: 30px;
+        }
+
+        @media screen and (min-width: 768px) and (max-width: 1042px) {
+          width: 48%;
+          margin-right: 0;
+        }
+
+        &:nth-child(even) {
+          margin-right: 0;
+
+          @include phone {
+            margin-right: auto;
+          }
+        }
+
+        &:last-child {
+          margin-right: 0;
+
+          @include phone {
+            margin-right: auto;
+          }
+        }
+
+        .image {
+          width: 300px;
+          height: 315px;
+          display: flex;
+          justify-content: space-between;
+
+          @include phone {
+            width: 315px;
+          }
+
+          @media screen and (min-width: 768px) and (max-width: 1042px) {
+            width: 100%;
+          }
+
+          .tag {
+            width: 36px;
+            height: 107px;
+            background-color: $primary-color;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin-left: 20px;
+
+            p {
+              color: $primary-color-light;
+              font-size: 16px;
+              writing-mode: vertical-rl;
+              letter-spacing: 3px;
+              font-weight: bold;
+            }
+          }
+
+          .favorite {
+            margin-top: 19px;
+            margin-right: 22px;
+
+            a {
+              width: 20px;
+              height: 18px;
+              color: $primary-color;
+
+              i.material-icons {
+                font-size: 21px;
+                vertical-align: middle;
+              }
+            }
+          }
+        }
+
+        .image-1 {
+          @include bg-set(url(../images/product-image-4.jpg));
+        }
+        .image-2 {
+          @include bg-set(url(../images/product-image-1.jpg));
+        }
+        .image-3 {
+          @include bg-set(url(../images/product-image-7.jpg));
+        }
+        .image-4 {
+          @include bg-set(url(../images/product-image-5.jpg));
+        }
+        .image-5 {
+          @include bg-set(url(../images/product-image-2.jpg));
+        }
+        .image-6 {
+          @include bg-set(url(../images/product-image-6.jpg));
+        }
+
+        .content {
+          .info {
+            width: 300px;
+            height: 56px;
+            line-height: 56px;
+            display: flex;
+            color: $primary-color;
+
+            @include phone {
+              width: 315px;
+            }
+
+            @media screen and (min-width: 768px) and (max-width: 1042px) {
+              width: 100%;
+            }
+
+            .item-name {
+              width: 175px;
+              height: 56px;
+              border: 1px solid $primary-color-light;
+
+              @include phone {
+                width: 183px;
+              }
+
+              p {
+                font-size: 20px;
+                color: $primary-color;
+              }
+            }
+
+            .item-price {
+              width: 125px;
+              height: 56px;
+              border: 1px solid $primary-color-light;
+              position: relative;
+              font-size: 20px;
+              font-weight: bold;
+              color: $primary-color;
+
+              @include phone {
+                width: 133px;
+              }
+
+              span {
+                margin-right: 5px;
+              }
+            }
+          }
+
+          .add-cart {
+            height: 65px;
+            line-height: 65px;
+            background-color: $primary-color-light;
+            border: 1px solid #eaf0ed;
+            transition: all 0.4s;
+
+            &:hover {
+              background-color: $primary-color;
+              border: 1px solid #eaf0ed;
+
+              a {
+                color: $primary-color-light;
+              }
+            }
+
+            a {
+              display: block;
+              font-size: 24px;
+              color: $primary-color;
+              font-weight: bold;
+            }
+          }
+        }
+      }
+
+      nav.page-area {
+        margin-top: 10px;
+        margin-left: auto;
+
+        @include phone {
+          margin-top: 0;
+          margin-right: auto;
+          width: 100%;
+        }
+
+        ul.pagination {
+          display: flex;
+          padding-left: 0;
+          list-style: none;
+
+          @include phone {
+            justify-content: center;
+          }
+
+          li.page-item {
+            width: 60px;
+            height: 60px;
+
+            &.current a.page-link,
+            &.current:hover a.page-link {
+              background-color: $primary-color;
+              border: 1px solid $primary-color;
+              color: $primary-color-light;
+              cursor: default;
+            }
+
+            &:hover a.page-link {
+              background-color: $primary-color-light;
+            }
+
+            a.page-link {
+              position: relative;
+              display: block;
+              width: 60px;
+              height: 60px;
+              padding: 19px 23px;
+              font-size: 20px;
+              color: $primary-color;
+              background-color: #fff;
+              border: 1px solid $primary-color-light;
+              transition: all 0.4s;
+
+              i {
+                position: absolute;
+                left: 50%;
+                margin-left: -12px;
+                color: $primary-color;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}

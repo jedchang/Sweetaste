@@ -1,0 +1,161 @@
+/*----------  success-area  ----------*/
+.success-area {
+  margin: 0 auto;
+  margin-bottom: 60px;
+
+  @include phone {
+    margin-bottom: 0px;
+  }
+
+  .container {
+    @include container-set;
+
+    @include phone {
+      @include container-set(100%);
+      padding: 0;
+    }
+
+    .main-bg {
+      width: 940px;
+      height: 460px;
+      margin: 0 auto;
+      position: relative;
+      @include bg-set(url(../images/banner-checkout-success.jpg));
+      display: flex;
+      align-items: center;
+
+      @include phone {
+        width: 100%;
+        height: 518px;
+        background-position: center center;
+        position: relative;
+        margin-bottom: 65px;
+      }
+
+      @include tablet {
+        width: 100%;
+      }
+
+      .content {
+        width: 300px;
+        // height: 213px;
+        margin: 0 auto;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+      }
+
+      ul.steps {
+        list-style: none;
+        width: 186px;
+        height: 50px;
+        margin: 0px;
+        padding: 0px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        position: relative;
+
+        &:before {
+          content: '';
+          position: absolute;
+          left: 0px;
+          top: 25px;
+          height: 1px;
+          width: 170px;
+          background-color: $primary-color;
+          -webkit-transform: translateY(-50%) perspective(1000px);
+          transform: translateY(-50%) perspective(1000px);
+        }
+
+        li.step {
+          position: relative;
+          font-size: 16px;
+          text-align: center;
+          width: 20px;
+          height: 20px;
+          line-height: 20px;
+          background-color: $primary-color;
+          border-radius: 50%;
+          z-index: 2;
+          display: flex;
+          justify-content: center;
+          align-items: center;
+
+          &.current {
+            border: 1px solid $primary-color-light;
+
+            span {
+              width: 14px;
+              height: 14px;
+              display: block;
+              border-radius: 50%;
+              background-color: $primary-color-light;
+            }
+          }
+
+          &.active {
+            background-color: $primary-color;
+
+            i {
+              font-size: 14px;
+              color: $primary-color-light;
+              padding-top: 4px;
+              font-weight: 700;
+            }
+          }
+        }
+      }
+
+      .txt-info {
+        width: 190px;
+        height: 45px;
+        @include bg-set(url(../images/lg-付款成功.svg));
+        background-size: auto;
+        margin-top: 30px;
+      }
+
+      .btn-group {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 300px;
+        height: 65px;
+        background-color: $secondary-color;
+        margin-top: 51px;
+
+        @include phone {
+          display: block;
+          position: absolute;
+          width: 100%;
+          bottom: -65px;
+          left: 0;
+          text-align: center;
+        }
+
+        a {
+          width: 300px;
+          height: 65px;
+          line-height: 65px;
+          text-align: center;
+          text-decoration: none;
+          font-size: 24px;
+          font-weight: bold;
+          color: $primary-color;
+          transition: all 0.4s;
+
+          &:hover {
+            color: $primary-color-light;
+            background-color: darken($secondary-color, 30%);
+          }
+
+          @include phone {
+            display: block;
+            width: 100%;
+            line-height: 65px;
+          }
+        }
+      }
+    }
+  }
+}

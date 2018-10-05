@@ -1,0 +1,473 @@
+/*----------  shopping-cart-area  ----------*/
+.shopping-cart-area {
+  margin-bottom: 39px;
+
+  @include phone {
+    margin-bottom: 0px;
+  }
+
+  .container {
+    @include container-set;
+    display: flex;
+
+    @include phone {
+      @include container-set(100%);
+      flex-direction: column;
+      padding: 0;
+    }
+
+    @include tablet {
+      justify-content: space-between;
+    }
+
+    .shopping-area {
+      width: 620px;
+      margin-top: 30px;
+      margin-right: 20px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+
+      @include phone {
+        width: 100%;
+        margin: 0 auto;
+      }
+
+      @include tablet {
+        width: 65%;
+        margin-right: 0;
+      }
+
+      h3 {
+        font-size: 24px;
+        font-weight: bold;
+        color: $primary-color;
+        width: 620px;
+        height: 65px;
+        line-height: 65px;
+        background-color: $primary-color-light;
+        text-align: center;
+        margin-bottom: 33px;
+
+        @include phone {
+          width: 100%;
+        }
+
+        @include tablet {
+          width: 100%;
+        }
+      }
+
+      .single-product {
+        width: 620px;
+        height: 130px;
+        display: flex;
+        align-items: center;
+        padding-bottom: 20px;
+        border-bottom: 1px solid $primary-color-light;
+        margin-top: 20px;
+
+        @include phone {
+          width: 315px;
+          height: 160px;
+          display: block;
+          position: relative;
+          padding-bottom: 0;
+          border-bottom: 0;
+          margin-top: 0;
+          margin-bottom: 30px;
+        }
+
+        @include tablet {
+          width: 430px;
+          flex-wrap: wrap;
+          justify-content: flex-end;
+          height: auto;
+        }
+
+        &:first-of-type {
+          margin-top: 0;
+        }
+
+        &:last-of-type {
+          border-bottom: 0;
+        }
+
+        .product-img.img1 {
+          background-image: url(../images/product-image-8.jpg);
+        }
+        .product-img.img2 {
+          background-image: url(../images/product-image-2.jpg);
+        }
+        .product-img.img3 {
+          background-image: url(../images/product-image-7.jpg);
+        }
+
+        .product-img {
+          width: 110px;
+          height: 110px;
+          background-size: cover;
+          background-position: center center;
+          background-repeat: no-repeat;
+          margin-right: 39px;
+
+          @include phone {
+            width: 157px;
+            height: 106px;
+            position: absolute;
+            margin-right: 16px;
+          }
+
+          @include tablet {
+            margin-left: 0;
+            margin-bottom: 15px;
+          }
+        }
+
+        .product-item {
+          width: 107px;
+          height: 53px;
+
+          @include phone {
+            position: absolute;
+            left: 173px;
+          }
+
+          @include tablet {
+            margin-right: auto;
+          }
+
+          p.name {
+            font-size: 20px;
+            color: $primary-color;
+            margin-bottom: 3px;
+            height: 28px;
+          }
+
+          p.price {
+            font-size: 16px;
+            color: $primary-color;
+            height: 22px;
+
+            span {
+              margin-right: 6px;
+            }
+          }
+        }
+
+        ul.count {
+          width: 144px;
+          display: flex;
+          flex-direction: row;
+          margin: 0 38px;
+
+          @include phone {
+            position: absolute;
+            left: 173px;
+            bottom: 53px;
+            margin: 0 auto;
+          }
+
+          @include tablet {
+            margin: 0;
+          }
+
+          li {
+            width: 48px;
+            height: 48px;
+            border: 1px solid $primary-color-light;
+
+            a {
+              display: block;
+              width: 48px;
+              height: 48px;
+              line-height: 48px;
+              text-align: center;
+              font-size: 16px;
+              color: $primary-color;
+              transition: all 0.4s;
+
+              &:hover {
+                background-color: $primary-color-light;
+              }
+            }
+
+            p {
+              display: block;
+              width: 48px;
+              height: 48px;
+              line-height: 48px;
+              text-align: center;
+              font-size: 16px;
+              color: $primary-color;
+            }
+
+            i {
+              font-size: 16px;
+              line-height: 48px;
+            }
+          }
+        }
+
+        .total-price {
+          width: 82px;
+          height: 28px;
+          line-height: 28px;
+          margin-right: 39px;
+
+          @include phone {
+            position: absolute;
+            right: 0;
+            bottom: 0;
+            width: 315px;
+            text-align: right;
+            margin-right: 0;
+            height: 45px;
+            position: absolute;
+            right: 0;
+            bottom: 0;
+            width: 315px;
+            text-align: right;
+            margin-right: 0;
+            height: 45px;
+          }
+
+          @include tablet {
+            margin-left: auto;
+          }
+
+          p.price {
+            font-size: 20px;
+            font-weight: bold;
+            color: $primary-color;
+
+            @include phone {
+              border-bottom: 1px solid $primary-color-light;
+              border-top: 1px solid $primary-color-light;
+              padding: 8.5px 40px 8.5px 0;
+            }
+
+            span {
+              margin-right: 6px;
+            }
+          }
+        }
+
+        a.delete {
+          font-size: 16px;
+          color: $primary-color;
+
+          @include phone {
+            position: absolute;
+            right: 0;
+            bottom: 8px;
+            text-align: right;
+            margin-right: 0;
+          }
+
+          i {
+            transition: all 0.4s;
+          }
+
+          &:hover i {
+            color: darken($secondary-color, 17%);
+          }
+        }
+      }
+    }
+
+    .order-area {
+      width: 300px;
+      height: 258px;
+      margin-top: 30px;
+
+      @include phone {
+        width: 100%;
+        margin-right: 0;
+      }
+
+      @include tablet {
+        width: 32%;
+      }
+
+      ul.content {
+        width: 300px;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        background-color: $primary-color;
+
+        @include phone {
+          width: 100%;
+          background-color: #ffffff;
+        }
+
+        @include tablet {
+          width: 100%;
+          margin-left: auto;
+        }
+
+        li.category {
+          width: 260px;
+          height: 65px;
+          line-height: 65px;
+          border-bottom: 1px solid $primary-color-light;
+          margin-bottom: 16px;
+
+          @include phone {
+            width: 315px;
+            border-bottom: 0px;
+            background-color: $primary-color-light;
+          }
+
+          @include tablet {
+            width: 90%;
+          }
+
+          p {
+            width: 96px;
+            height: 33px;
+            line-height: 33px;
+            font-size: 24px;
+            font-weight: bold;
+            color: $primary-color-light;
+            margin: 16px auto;
+
+            @include phone {
+              color: $primary-color;
+            }
+          }
+        }
+
+        li.item {
+          display: flex;
+          height: 22px;
+          line-height: 22px;
+          margin-bottom: 8px;
+          justify-content: space-between;
+          width: 300px;
+
+          @include tablet {
+            width: 90%;
+          }
+
+          &:nth-of-type(3) {
+            margin-bottom: 16px;
+          }
+
+          p {
+            font-size: 16px;
+            color: $primary-color-light;
+            font-weight: 300;
+            margin-left: 18px;
+
+            @include phone {
+              color: $primary-color;
+              font-weight: 400;
+            }
+
+            @include tablet {
+              margin-left: 0;
+            }
+          }
+
+          p.price {
+            margin-right: 23px;
+
+            @include phone {
+              color: $primary-color;
+              font-weight: 400;
+            }
+
+            @include tablet {
+              margin-right: 0;
+            }
+
+            span {
+              margin-right: 7px;
+            }
+          }
+        }
+
+        li.total {
+          display: flex;
+          height: 28px;
+          line-height: 28px;
+          justify-content: space-between;
+          width: 300px;
+          margin-bottom: 16px;
+
+          @include tablet {
+            width: 90%;
+          }
+
+          p {
+            font-size: 20px;
+            color: $primary-color-light;
+            font-weight: bold;
+            margin-left: 18px;
+
+            @include phone {
+              color: $primary-color;
+            }
+
+            @include tablet {
+              margin-left: 0;
+            }
+          }
+
+          p.price {
+            margin-right: 23px;
+
+            @include tablet {
+              margin-right: 0;
+            }
+
+            span {
+              margin-right: 6px;
+            }
+          }
+        }
+      }
+
+      .checkout {
+        width: 300px;
+        height: 65px;
+        background-color: $secondary-color;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        transition: all 0.4s;
+
+        &:hover {
+          background-color: darken($secondary-color, 30%);
+
+          a.btn {
+            color: #fff;
+          }
+        }
+
+        @include phone {
+          width: 100%;
+        }
+
+        @include tablet {
+          width: 100%;
+          margin-left: auto;
+        }
+
+        a.btn {
+          width: 300px;
+          height: 65px;
+          line-height: 65px;
+          font-size: 24px;
+          font-weight: bold;
+          color: $primary-color;
+          text-align: center;
+          transition: all 0.4s;
+        }
+      }
+    }
+  }
+}

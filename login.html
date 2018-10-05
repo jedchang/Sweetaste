@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>登入 ｜ Sweetaste*</title>
+  <link rel="shortcut icon" type="image/x-icon" href="./favicon.ico">
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+  <link rel="stylesheet" href="./css/all.min.css">
+</head>
+
+<body>
+  <div class="wrapper">
+
+    <header>
+      <div class="container">
+        <nav class="navbar">
+          <a href="index.html" class="brand"></a>
+          <ul class="navbar-right">
+            <li class="nav-item">
+              <a class="nav-link" href="index.html">首頁</a>
+              <a class="nav-link-hover" href="index.html">首頁</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="product.html">甜點</a>
+              <a class="nav-link-hover" href="product.html">甜點</a>
+            </li>
+            <li class="nav-item active">
+              <a class="nav-link">登入</a>
+              <a class="nav-link-hover">登入</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link shopping-cart" href="cart.html"><i class="material-icons">shopping_cart</i></a>
+              <a class="nav-link-hover shopping-cart" href="cart.html"><i class="material-icons">shopping_cart</i></a>
+            </li>
+          </ul>
+        </nav>
+        <div class="mobilenav">
+          <ul class="content">
+            <li><a href="index.html">首頁</a></li>
+            <li><a href="product.html">甜點</a></li>
+            <li class="active"><a>登入</a></li>
+          </ul>
+        </div>
+        <nav class="mobile-navbar">
+          <div class="navbar-wrapper">
+            <a href="javascript:void(0)" class="hamburger-icon">
+              <div class="hamburger">
+                <div class="menui top-menu"></div>
+                <div class="menui mid-menu"></div>
+                <div class="menui bottom-menu"></div>
+              </div>
+            </a>
+            <a class="brand" href="index.html"><img src="./images/logotype-sm-dark.svg" alt=""></a>
+            <a class="nav-link" href="cart.html"><i class="material-icons">shopping_cart</i></a>
+          </div>
+        </nav>
+      </div>
+    </header>
+
+    <section class="login-area">
+      <div class="container">
+        <div class="login-account">
+          <div class="title">
+            <h2>會員登入</h2>
+          </div>
+          <div class="content">
+            <form action="">
+              <div class="form-group">
+                <i class="material-icons">person</i>
+                <input type="text" class="form-control" placeholder="電子信箱/手機號碼" required="required">
+              </div>
+              <div class="form-group">
+                <i class="material-icons">vpn_key</i>
+                <input type="password" class="form-control" placeholder="請輸入使用者密碼" required="required">
+              </div>
+
+              <div class="checkbox-group">
+                <input type="checkbox" id="custom-checkbox">
+                <label for="custom-checkbox" class="custom-label"></label>
+                <span>記住我</span>
+              </div>
+              <div class="login-group">
+                <a class="btn" href="javascript:;">登入帳號</a>
+              </div>
+            </form>
+          </div>
+        </div>
+        <div class="other-account">
+          <div class="title">
+            <h3>連結社群帳號</h3>
+          </div>
+          <div class="content">
+            <div class="btn"><a href="https://zh-tw.facebook.com/login/" target="_blank" class="facebook"></a></div>
+            <div class="btn"><a href="https://accounts.google.com/ServiceLogin/signinchooser" target="_blank" class="google"></a></div>
+            <div class="btn"><a href="https://login.yahoo.com/" target="_blank" class="yahoo"></a></div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <footer>
+      <div class="order-area">
+        <div class="brand">
+          <div class="logo"></div>
+          <h3 class="slogan">訂閱你我的甜蜜郵件</h3>
+        </div>
+        <form class="input-form">
+          <i class="material-icons mail">mail</i>
+          <input type="email" class="form-control">
+          <a href="javascript:;" class="submit-btn"><i class="material-icons arrow">arrow_forward</i></a>
+        </form>
+      </div>
+      <div class="info-area">
+        <div class="left-panel">
+          <div class="brand"></div>
+          <ul class="info">
+            <li>07-1234-5678</li>
+            <li>sweetaste@email.com</li>
+            <li>800 高雄市新興區幸福路 520 號</li>
+          </ul>
+          <ul class="social-media">
+            <li><a href="javascript:;"><img src="./images/ic-line@.svg" alt=""></a></li>
+            <li><a href="javascript:;"><img src="./images/ic-facebook.svg" alt=""></a></li>
+          </ul>
+        </div>
+        <div class="right-panel">
+          <div class="title"></div>
+          <div class="copyright">
+            <p>© 2018 Sweetaste* All Rights Reserved</p>
+          </div>
+        </div>
+      </div>
+    </footer>
+
+  </div>
+  <script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.js'></script>
+  <script src="./js/scripts.js"></script>
+</body>
+
+</html>
