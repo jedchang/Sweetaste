@@ -1,5 +1,6 @@
 # Sweetaste RWD Exercise
-![image](https://img.shields.io/badge/RWD-exercise-brightgreen.svg) ![image](https://img.shields.io/badge/SASS-exercise-brightgreen.svg)
+![image](https://img.shields.io/badge/RWD-exercise-blue.svg) 
+![image](https://img.shields.io/badge/SASS-exercise-ff69b4.svg)
 
 - **`eq()`** - 選取帶有指定 index 值的元素，index 值從 0 開始
 - **`find()`** - 獲取當前元素中，每個元素的後代
